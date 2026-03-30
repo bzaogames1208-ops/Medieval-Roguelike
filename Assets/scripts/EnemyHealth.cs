@@ -23,6 +23,17 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        if (player != null)
+        {
+            PlayerXP xp = player.GetComponent<PlayerXP>();
+
+            if (xp != null)
+            {
+                xp.AddXP(10);
+            }
+        }
         Destroy(gameObject);
     }
 }
