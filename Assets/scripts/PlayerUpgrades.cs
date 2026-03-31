@@ -21,6 +21,9 @@ public class PlayerUpgrades : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha3))
                 upgradeManager.ApplyUpgrade(3);
+            
+            if (Input.GetKeyDown(KeyCode.Alpha4))
+                upgradeManager.ApplyUpgrade(4);
         }
     }
 }

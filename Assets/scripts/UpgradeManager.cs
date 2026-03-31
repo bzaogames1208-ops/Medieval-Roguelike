@@ -31,6 +31,12 @@ public class UpgradeManager : MonoBehaviour
                 skill.cooldown *= 0.8f;
                 Debug.Log("Skill mais rápida!");
                 break;
+
+            case 4:
+                PlayerMagnet magnet = GetComponent<PlayerMagnet>();
+                magnet.magnetRange += 2f;
+                Debug.Log("Magnet aumentado!");
+                break;
         }
 
         Time.timeScale = 1f;

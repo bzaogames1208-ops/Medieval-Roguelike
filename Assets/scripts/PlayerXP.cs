@@ -38,6 +38,7 @@ public class PlayerXP : MonoBehaviour
         Debug.Log("1 - Mais dano");
         Debug.Log("2 - Mais Vida");
         Debug.Log("3 - Cooldown da skill");
+        Debug.Log("4 - Magnet (coleta XP de longe)");
 
         Time.timeScale = 0f; // pausa o jogo
     }

@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Medieval Roguelike.slnx",
+    "dotnet.defaultSolution": "Medieval-Roguelike.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }

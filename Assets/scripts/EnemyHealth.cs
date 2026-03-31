@@ -5,6 +5,11 @@ public class EnemyHealth : MonoBehaviour
     public int maxHealth = 40;
     private int currentHealth;
 
+    public int xpValue = 10;
+
+public GameObject xpPrefab;
+
+
     void Start()
     {
         currentHealth = maxHealth;
@@ -23,17 +28,15 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
+    GameObject xp = Instantiate(xpPrefab, transform.position, Quaternion.identity);
 
-        if (player != null)
+    XPCollect xpScript = xp.GetComponent<XPCollect>();
+
+    if (xpScript != null)
         {
-            PlayerXP xp = player.GetComponent<PlayerXP>();
-
-            if (xp != null)
-            {
-                xp.AddXP(10);
-            }
+        xpScript.xpValue = xpValue;
         }
-        Destroy(gameObject);
+
+    Destroy(gameObject);
     }
 }
